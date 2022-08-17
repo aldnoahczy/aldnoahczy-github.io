@@ -1,0 +1,80 @@
+@import "../abstracts/variables";
+
+body{
+    font-family: "Lato",sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color:$color-grey-dark;
+    padding:3rem;
+}
+.heading-primary{
+    color:$color-white;
+    /* 设置文本全部大写 */
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 6rem;
+    &--main{
+        /* 设置为块级元素 */
+        display: block;
+        font-size: 6rem;
+        /* 文字粗细 */
+        font-weight: 400;
+        /* 文字间距 */
+        letter-spacing: 3.5rem;
+    
+        /* 动画操作 */
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        /* 缓入缓出... */
+        animation-timing-function: ease-in-out;
+        /* animation-delay: 0.5s; */
+    
+        /* 动画次数 */
+        /* animation-iteration-count: 3;*/
+    
+    
+    }
+    &--sub{
+        display: block;
+        font-size: 2rem;
+        font-weight: 400;
+        letter-spacing: 1.74rem;
+    
+        animation-name: moveInRight;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+    }
+}
+
+.heading-secondary{
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    // 背景色只占据文字宽度
+    display: inline-block;
+    background-image: linear-gradient(to right,$color-primary-light,$color-primary-dark);
+    // 文字蒙版
+    -webkit-background-clip: text;
+    color:transparent; //文字透明化，让背景色文字显示
+    letter-spacing: 2px;
+    transition: all .2s;
+
+    &:hover{
+        // 3d倾斜
+        transform: skewY(2deg) skewX(15deg);
+        text-shadow: .5rem 1rem 2rem rgba($color-black,.2);
+    }
+}
+
+.heading-teriary{
+    font-size: $default-font-size;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.paragraph{
+    font-size:  $default-font-size;
+    &:not(:last-child){
+        margin-bottom: 3rem;
+    }
+}
