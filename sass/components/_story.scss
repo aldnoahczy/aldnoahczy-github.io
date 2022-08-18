@@ -1,0 +1,57 @@
+.story{
+    width: 75%;
+    margin: 0 auto; //居中
+    box-shadow: 0 3rem 6rem rgba($color-black,.1);
+    background-color: $color-white;
+    border-radius: 3px;
+    padding: 4rem;
+    font-size: $default-font-size;
+
+    transform: skewX(-12deg);
+    & > *{
+        transform: skewX(12deg);
+    }
+
+    &__shape{
+        width: 15rem;
+        height: 15rem;
+        background-color:orangered;
+        float: left;
+        
+        shape-outside: circle(50% at 50% 50%);//与其他元素的边缘成圆形
+        clip-path:circle(50% at 50% 50%) ;    //切割成圆形
+        transform: teanslateX(-3rem);
+        position: relative;
+        
+    }
+    &__img{
+        height: 100%;
+        transform: translateX(-4rem) scale(1.4);
+        transition: all .5s;
+        backface-visibility: hidden;  //消除元素位移的震动
+        border:none;
+    }
+    &__caption{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,20%);
+        color:$color-white;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 1.7rem;
+        opacity: 0;
+        transition: all .5s;
+        backface-visibility: hidden;  //消除元素位移的震动
+    }
+
+    &:hover &__caption{
+        opacity: 1;
+        transform: translate(-50%,-50%);
+
+    }
+    &:hover &__img{
+        transform: scale(1) translateX(-4rem);
+        filter: blur(3px) brightness(80%);
+    }
+}
