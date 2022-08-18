@@ -28,3 +28,25 @@
     padding:15rem 0;    
     position: relative;
 }
+
+.section-book{
+    padding: 15rem 0;
+    background-image: linear-gradient(to right bottom,$color-primary-light,$color-primary-dark);
+}
+.book{
+    //纯色渐变 0-50%都是90%透明度白色 50%到100%纯透明z
+    background-image: linear-gradient(105deg,
+    rgba($color-white,.8) 0%,
+    rgba($color-white,.8) 50%,
+    transparent 50%), 
+    url(../../photo/book-1.jpg);
+    background-size: cover;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black,.2);
+    height: 50rem;
+    
+    &__form{
+        width:50%;
+        padding: 0 6rem;
+    }
+}
