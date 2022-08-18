@@ -2,7 +2,7 @@
     width: 75%;
     margin: 0 auto; //居中
     box-shadow: 0 3rem 6rem rgba($color-black,.1);
-    background-color: $color-white;
+    background-color: rgba($color-white,.6);
     border-radius: 3px;
     padding: 4rem;
     font-size: $default-font-size;
@@ -15,13 +15,13 @@
     &__shape{
         width: 15rem;
         height: 15rem;
-        background-color:orangered;
         float: left;
         
         shape-outside: circle(50% at 50% 50%);//与其他元素的边缘成圆形
         clip-path:circle(50% at 50% 50%) ;    //切割成圆形
-        transform: teanslateX(-3rem);
+        transform: teanslateX(-4rem);
         position: relative;
+        
         
     }
     &__img{
@@ -52,6 +52,7 @@
     }
     &:hover &__img{
         transform: scale(1) translateX(-4rem);
-        filter: blur(3px) brightness(80%);
+        filter: blur(4px) brightness(80%);
+        box-shadow: 0 3rem 4rem rgba($color-black,.15);
     }
 }
