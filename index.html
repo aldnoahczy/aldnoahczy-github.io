@@ -12,7 +12,7 @@
     <script>
         L2Dwidget.init({ "model": { jsonPath:
         "https://unpkg.com/live2d-widget-model-shizuku@1.0.5/assets/shizuku.model.json",
-        "scale": 1 }, "display": { "position": "left", "width": 100, "height": 250,
+        "scale": 1 }, "display": { "position": "left", "width": 75, "height": 150,
         "hOffset": 20, "vOffset": 0 }, "mobile": { "show": true, "scale": 0.5 },
         "react": { "opacityDefault": 1, "opacityOnHover": 1 } });
     </script>
@@ -53,7 +53,7 @@
                 <span class="heading-primary--main">人生是一场旅行</span>
                 <span class="heading-primary--sub">而我们都是过客</span>
             </h1>
-            <a href="#" class="btn btn--white btn--animated">Discover our tours</a>
+            <a href="#section-tours" class="btn btn--white btn--animated">Discover our tours</a>
         </div>
     </header>
     <main>
@@ -81,7 +81,7 @@
                         <img src="photo/about-1.jpg" alt="photo 1" class="composition__photo composition__photo--p1">
                         <img src="photo/about-2.jpg" alt="photo 2" class="composition__photo composition__photo--p2">
                         <img src="photo/about-3.jpg" alt="photo 3" class="composition__photo composition__photo--p3">
-                    </div>   
+                    </div>
                 </div>
             </div>
         </section>
@@ -130,7 +130,7 @@
             </div>
         </section>
 
-        <section class="section-tours">
+        <section class="section-tours" id="section-tours">
             <div class="u-center-text u-margin-bottom-big">
                 <h2 class="heading-secondary">
                     Most popular tours
@@ -145,7 +145,7 @@
                                 &nbsp;
                             </div>
                             <h4 class="card__heading">
-                                <span class="card__heading-span card__heading-span--1">The sea explore</span>                                
+                                <span class="card__heading-span card__heading-span--1">The sea explore</span>
                             </h4>
                             <div class="card__details">
                                 <ul>
@@ -163,7 +163,7 @@
                                     <p class="card__price-only">Only</p>
                                     <p class="card__price-value">$297</p>
                                 </div>
-                                <a href="#" class="btn btn--white">Book now!</a>
+                                <a href="#popup" class="btn btn--white">Book now!</a>
                             </div>
                         </div>
                     </div>
@@ -176,7 +176,7 @@
                                 &nbsp;
                             </div>
                             <h4 class="card__heading">
-                                <span class="card__heading-span card__heading-span--2">The sea explore</span>                                
+                                <span class="card__heading-span card__heading-span--2">The sea explore</span>
                             </h4>
                             <div class="card__details">
                                 <ul>
@@ -194,7 +194,7 @@
                                     <p class="card__price-only">Only</p>
                                     <p class="card__price-value">$297</p>
                                 </div>
-                                <a href="#" class="btn btn--white">Book now!</a>
+                                <a href="#popup" class="btn btn--white">Book now!</a>
                             </div>
                         </div>
                     </div>
@@ -207,7 +207,7 @@
                                 &nbsp;
                             </div>
                             <h4 class="card__heading">
-                                <span class="card__heading-span card__heading-span--3">The sea explore</span>                                
+                                <span class="card__heading-span card__heading-span--3">The sea explore</span>
                             </h4>
                             <div class="card__details">
                                 <ul>
@@ -225,12 +225,12 @@
                                     <p class="card__price-only">Only</p>
                                     <p class="card__price-value">$297</p>
                                 </div>
-                                <a href="#" class="btn btn--white">Book now!</a>
+                                <a href="#popup" class="btn btn--white">Book now!</a>
                             </div>
                         </div>
                     </div>
                 </div>
-    
+
         </section>
 
 
@@ -347,6 +347,26 @@
             </div>
         </div>
     </footer>
+
+
+    <!-- 弹出窗口 -->
+    <div class="popup" id="popup">
+        <div class="popup__content">
+            <div class="popup__left">
+                <img src="./photo/pop-1.jpg" alt="Tour Photo" class="popup__img">
+                <img src="./photo/pop-2.jpg" alt="Tour Photo" class="popup__img">
+            </div>
+            <div class="popup__right">
+                <a href="#section-tours" class="popup__close">&times;</a>
+                <h2 class="heading-secondary u-margin-bottom-small">Strat booking now</h2>
+                <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; Please read these terms before booking.</h3>
+                <p class="popup__text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis vulputate enim nulla aliquet porttitor. Egestas maecenas pharetra convallis posuere morbi leo urna. Quam adipiscing vitae proin sagittis nisl rhoncus mattis. Ut morbi tincidunt augue interdum velit euismod in. Fermentum odio eu feugiat pretium nibh ipsum. Dictum non consectetur a erat nam at lectus urna duis. Felis bibendum ut tristique et egestas. Id venenatis a condimentum vitae sapien pellentesque habitant morbi.
+                </p>
+                <a href="#" class="btn btn--green">Book now</a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
 
