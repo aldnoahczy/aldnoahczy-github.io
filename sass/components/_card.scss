@@ -56,13 +56,13 @@
         background-blend-mode: screen; //设置不同的混合模式  background-image中 渐变与图片的混合
         clip-path: polygon(0 0,100% 0,100% 85%,0 100%); //图形切割
         &--1{
-            background-image:  linear-gradient(to right bottom,$color-secondary-light,$color-secondary-dark), url(../../photo/about-1.jpg);
+            background-image:  linear-gradient(to right bottom,$color-secondary-light,$color-secondary-dark), url(../photo/about-1.jpg);
         }
         &--2{
-            background-image: linear-gradient(to right bottom,$color-primary-light,$color-primary-dark), url(../../photo/about-2.jpg);
+            background-image: linear-gradient(to right bottom,$color-primary-light,$color-primary-dark), url(../photo/about-2.jpg);
         }
         &--3{
-            background-image: linear-gradient(to right bottom,$color-tertiary-light,$color-tertiary-dark), url(../../photo/about-2.jpg);
+            background-image: linear-gradient(to right bottom,$color-tertiary-light,$color-tertiary-dark), url(../photo/about-3.jpg);
         }
     }
 
